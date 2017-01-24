@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.whiznic.blackbox1" >
+
+
+    <!-- adding user permissions -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <permission android:name="com.whiznic.blackbox1.permission.C2D_MESSAGE"
+                android:protectionLevel="signature" />
+    <uses-permission android:name="com.whiznic.blackbox.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+
+        android:icon="@drawable/ic_hbgadget"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.whiznic.blackbox1.MainActivity"
+            android:configChanges="fontScale|keyboard|layoutDirection|keyboardHidden|locale|navigation|orientation|screenLayout|screenSize|touchscreen|uiMode">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.whiznic.blackbox1.BinDetailAcitivity"
+                  android:configChanges="fontScale|keyboard|layoutDirection|keyboardHidden|locale|navigation|orientation|screenLayout|screenSize|touchscreen|uiMode">
+
+        </activity>
+
+        <activity android:name="com.whiznic.blackbox1.SendSMSActivity"
+                  android:configChanges="fontScale|keyboard|layoutDirection|keyboardHidden|locale|navigation|orientation|screenLayout|screenSize|touchscreen|uiMode">
+
+        </activity>
+
+        <activity android:name="com.whiznic.blackbox1.Notification"
+            android:configChanges="fontScale|keyboard|layoutDirection|keyboardHidden|locale|navigation|orientation|screenLayout|screenSize|touchscreen|uiMode">
+
+        </activity>
+
+
+        <activity
+            android:name="com.whiznic.blackbox1.Login_Activity"
+            android:label="@string/app_name"
+            android:configChanges="fontScale|keyboard|layoutDirection|keyboardHidden|locale|navigation|orientation|screenLayout|screenSize|touchscreen|uiMode">
+>
+
+        </activity>
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!-- android:value="@integer/google_play_services_version" -->
+
+        <service android:name="com.whiznic.blackbox1.services.My_Service" android:exported="true" android:enabled="true"></service>
+
+
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action
+                    android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.whiznic.hbgadget" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.whiznic.blackbox1.services.My_Reciver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </receiver>
+
+        <service
+            android:name="com.whiznic.blackbox1.MyGcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.whiznic.blackbox1.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,43 @@
+{
+  "project_info": {
+    "project_id": "the-black-box-17e2f",
+    "project_number": "140793134719",
+    "name": "The Black Box"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140793134719:android:b187a99c0f22aef4",
+        "client_id": "android:com.whiznic.blackbox",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.whiznic.blackbox",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 2,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 1
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}

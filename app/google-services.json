@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "1092048181155",
+    "project_id": "firebase-gps-tracker"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092048181155:android:b187a99c0f22aef4",
+        "android_client_info": {
+          "package_name": "com.whiznic.blackbox"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDSIhV-O4VSv_RrXQCNhBK6tcPwIv9LWs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

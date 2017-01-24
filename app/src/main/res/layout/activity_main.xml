@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/home_header"
+        style="@style/form_header_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|fill_vertical|fill_horizontal|start"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:foregroundGravity="top">
+        <TextView
+            android:id="@+id/appName"
+            style="@style/form_header_label"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/app_name"/>
+
+        <ImageButton
+            android:id="@+id/btn_logout"
+            style="@style/form_header_background"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/logout_btn_pressed"
+            android:src="@drawable/power_off"/>
+        <ImageButton
+            android:id="@+id/btn_menu"
+            style="@style/form_header_background"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/logout_btn_pressed"
+           />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/home_footer"
+        android:layout_below="@+id/home_header">
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"/>
+
+        <FrameLayout
+            android:id="@+id/framelayout_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <WebView
+                    android:id="@+id/my_webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:id="@+id/textView2"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="47dp"
+                    android:layout_marginStart="47dp"
+                    android:layout_marginTop="51dp" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <!--
+        <ScrollView
+                android:id="@+id/scroll_middle"
+                 android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+    </ScrollView>
+    -->
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/home_footer"
+        style="@style/form_header_background"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_weight="0.18">
+
+        <TextView
+            android:id="@+id/copyright_footer"
+            style="@style/form_header_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:text="@string/copyright"/>
+    </RelativeLayout>
+</RelativeLayout>
+        </FrameLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:layout_gravity="start"
+        >
+        <RelativeLayout
+            style="@style/form_header_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <TextView
+                style="@style/form_header_label"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="MENU"
+
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"/>
+
+
+        </RelativeLayout>
+        <ListView
+            android:id="@+id/list_slidermenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:choiceMode="singleChoice"
+            android:divider="#a7a7a7"
+            android:dividerHeight="1dp"
+            android:background="#F0F0F0"/>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
